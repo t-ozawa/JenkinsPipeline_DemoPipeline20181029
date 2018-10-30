@@ -1,10 +1,4 @@
 pipeline {
-    agent any
-    stages {
-        stage('chekout') {
-            checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '54ff7eee-6633-4d52-8ad3-5f6b32434ed2', url: 'git@github.com:t-ozawa/JenkinsPipeline_DemoPipeline20181029.git']]])
-        }
-    }
     agent {
         label 'Slave'
     }

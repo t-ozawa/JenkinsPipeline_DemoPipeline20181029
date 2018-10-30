@@ -7,10 +7,8 @@ pipeline {
             steps {
                 echo 'S1'
                 //Gitでビルド対象を取得
-                //Gitリポジトリの指定
-                git url:
-                
-                checkout changelog: false, scm: [$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '54ff7eee-6633-4d52-8ad3-5f6b32434ed2', url: 'git@github.com:t-ozawa/JenkinsPipeline_DemoPipeline20181029.git']]]
+                //Gitリポジトリの指定(git pullしてる)
+                git url: 'git@github.com:t-ozawa/Hellohoge.git', branch: 'master' 
             }
         }
         stage('Stage2') {
@@ -23,6 +21,8 @@ pipeline {
         stage('Stage3') {
             steps {
                 echo 'S3'
+                //成果物の保存
+                archiveArtifacts artifacts: 'C:\\Jenkins\\workspace\\DemoPipeline20181029', onlyIfSuccessful: true
             }
         }
     }

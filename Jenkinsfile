@@ -6,6 +6,11 @@ pipeline {
         stage('Stage1') {
             steps {
                 echo 'S1'
+                //Gitでビルド対象を取得
+                //Gitリポジトリの指定
+                git url:
+                
+                checkout changelog: false, scm: [$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '54ff7eee-6633-4d52-8ad3-5f6b32434ed2', url: 'git@github.com:t-ozawa/JenkinsPipeline_DemoPipeline20181029.git']]]
             }
         }
         stage('Stage2') {

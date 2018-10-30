@@ -22,7 +22,7 @@ pipeline {
             steps {
                 echo 'S3'
                 //ê¨â ï®ÇÃï€ë∂
-                archiveArtifacts artifacts: 'C:\\Jenkins\\workspace\\DemoPipeline20181029', onlyIfSuccessful: true
+                //archiveArtifacts artifacts: 'C:\\Jenkins\\workspace\\DemoPipeline20181029', onlyIfSuccessful: true
             }
         }
     }

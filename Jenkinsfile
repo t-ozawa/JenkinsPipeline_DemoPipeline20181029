@@ -22,7 +22,9 @@ pipeline {
             steps {
                 echo 'S3'
                 //ê¨â ï®ÇÃï€ë∂
-                archiveArtifacts artifacts: 'ConsoleApp_Hellohoge\\x64\\Debug\\**.exe', excludes: 'ConsoleApp_Hellohoge\\**.exe', onlyIfSuccessful: true
+                archiveArtifacts artifacts: 'ConsoleApp_Hellohoge\\x64\\Debug\\**.exe', onlyIfSuccessful: true
+                //ê¨â ï®ÉtÉ@ÉCÉãÇÃà⁄ìÆ
+                bat 'move C:\\Jenkins\workspace\\DemoPipeline20181029\\ConsoleApp_Hellohoge\\x64\\Debug\\ConsoleApp.exe  C:\\Jenkins\workspace\\DemoPipeline20181029\\ConsoleApp_Hellohoge'
             }
         }
     }

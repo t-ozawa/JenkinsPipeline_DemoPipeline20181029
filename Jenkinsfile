@@ -24,7 +24,7 @@ pipeline {
                 //ê¨â ï®ÇÃï€ë∂
                 archiveArtifacts artifacts: 'ConsoleApp_Hellohoge\\x64\\Debug\\**.exe', onlyIfSuccessful: true
                 //ê¨â ï®ÉtÉ@ÉCÉãÇÃà⁄ìÆ
-                bat 'move C:\\Jenkins\workspace\\DemoPipeline20181029\\ConsoleApp_Hellohoge\\x64\\Debug\\ConsoleApp.exe  C:\\Jenkins\workspace\\DemoPipeline20181029\\ConsoleApp_Hellohoge'
+                bat 'move C:\\Jenkins\\workspace\\DemoPipeline20181029\\ConsoleApp_Hellohoge\\x64\\Debug\\ConsoleApp.exe  C:\\Jenkins\workspace\\DemoPipeline20181029\\ConsoleApp_Hellohoge'
             }
         }
     }

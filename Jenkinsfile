@@ -21,6 +21,7 @@ pipeline {
         stage('Stage3') {
             steps {
                 echo 'S3'
+                //実行したジョブのworkspaceがカレントディレクトリになっているので注意(Jenkins特有のScript実行時のみ)
                 //成果物の保存
                 archiveArtifacts artifacts: 'ConsoleApp_Hellohoge\\x64\\Debug\\**.exe', onlyIfSuccessful: true
                 //成果物ファイルの移動

@@ -14,6 +14,9 @@ pipeline {
         stage('Stage2') {
             steps {
                 echo 'S2'
+                //exeファイルの検索
+                //bat 'dir /b *.exe'ディレクトリ内の*.exeを検索
+                //where /R C:\\hoge *.exe hogeの下*.exeを検索
                 //MSBuildでビルド
                 bat '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\\Bin\\MSBuild.exe" C:\\Jenkins\\workspace\\DemoPipeline20181029\\ConsoleApp_Hellohoge\\ConsoleApp_Hellohoge.sln'
             }

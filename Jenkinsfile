@@ -22,7 +22,7 @@ pipeline {
             steps {
                 echo 'S3'
                 //ê¨â ï®ÇÃï€ë∂
-                archiveArtifacts artifacts: 'ConsoleApp_Hellohoge\\x64\\Debug\\**.exe', onlyIfSuccessful: true
+                archiveArtifacts artifacts: 'ConsoleApp_Hellohoge/*\\x64\\Debug*/\\**.exe', onlyIfSuccessful: true
             }
         }
     }

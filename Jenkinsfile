@@ -22,7 +22,7 @@ pipeline {
             steps {
                 echo 'S3'
                 //ê¨â ï®ÇÃï€ë∂
-                archiveArtifacts artifacts: 'C:\\Jenkins\\workspace\\DemoPipeline20181029C\\ConsoleApp_Hellohoge\\*.exe', onlyIfSuccessful: true
+                archiveArtifacts artifacts: 'ConsoleApp_Hellohoge\\x64\\Debug\\**.exe', onlyIfSuccessful: true
             }
         }
     }

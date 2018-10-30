@@ -21,8 +21,8 @@ pipeline {
         stage('Stage3') {
             steps {
                 echo 'S3'
-                //ê¨â ï®ÇÃï€ë∂
-                archiveArtifacts artifacts: 'ConsoleApp_Hellohoge/*\\x64\\Debug*/\\**.exe', onlyIfSuccessful: true
+                //ê¨â ï®ÇÃï€ë∂ConsoleApp_Hellohoge\\x64\\Debug\\**.exe
+                archiveArtifacts artifacts: 'ConsoleApp_Hellohoge\\**.exe', onlyIfSuccessful: true
             }
         }
     }

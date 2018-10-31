@@ -2,9 +2,14 @@ pipeline {
     agent {
         label 'Slave'
     }
+    environment { 
+        hoge = 'ConsoleApp_Hellohoge\\ConsoleApp_Hellohoge.sln'
+        
+    }
     stages {
         stage('Stage1') {
             steps {
+                echo '%hoge%'
                 echo 'S1'
                 //Gitでビルド対象を取得
                 //Gitリポジトリの指定
@@ -14,8 +19,6 @@ pipeline {
         stage('Stage2') {
             steps {
                 echo 'S2'
-                hoge = 'ConsoleApp_Hellohoge\\ConsoleApp_Hellohoge.sln'
-                echo '%hoge%'
                 //MSBuildでビルド
                 bat '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\\Bin\\MSBuild.exe" C:\\Jenkins\\workspace\\DemoPipeline20181029\\ConsoleApp_Hellohoge\\ConsoleApp_Hellohoge.sln'
             }

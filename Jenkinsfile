@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Stage1') {
             steps {
-                echo '%hoge%'
+                echo %hoge%
                 echo 'S1'
                 //Gitでビルド対象を取得
                 //Gitリポジトリの指定
